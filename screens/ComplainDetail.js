@@ -35,7 +35,7 @@ class ComplainDetail extends Component {
               <IconEnt
                 name="chevron-small-left"
                 style={styles.IconEntStyle}
-                size={35}
+                size={25}
               />
             </TouchableOpacity>
           </View>
@@ -43,24 +43,20 @@ class ComplainDetail extends Component {
             <Text style={styles.headerText}>Job Detail</Text>
           </View>
         </View>
-        <Text style={{fontWeight: 'bold', padding: 7}}>Client Name: </Text>
-        <Text style={{paddingLeft: 7}}>{Name}</Text>
-        <Text style={{fontWeight: 'bold', padding: 7}}>Client Number:</Text>
-        <Text style={{paddingLeft: 7}}> {address}</Text>
-        <Text style={{fontWeight: 'bold', padding: 7}}>Description: </Text>
-        <Text style={{paddingLeft: 7}}>{Description}</Text>
-        <Text style={{fontWeight: 'bold', padding: 7}}>
+        <Text style={{fontWeight: 'bold', padding: '5%'}}>Client Name: </Text>
+        <Text style={{paddingLeft: '5%'}}>{Name}</Text>
+        <Text style={{fontWeight: 'bold', padding: '5%'}}>Client Number:</Text>
+        <Text style={{paddingLeft: '5%'}}> {address}</Text>
+        <Text style={{fontWeight: 'bold', padding: '5%'}}>Description: </Text>
+        <Text style={{paddingLeft: '5%'}}>{Description}</Text>
+        <Text style={{fontWeight: 'bold', padding: '5%'}}>
           Complain Registration Date:
         </Text>
-        <Text style={{paddingLeft: 7}}> {Date}</Text>
-        <Text style={{fontWeight: 'bold', padding: 7}}>Complain status: </Text>
+        <Text style={{paddingLeft: '5%'}}> {Date}</Text>
+        <Text style={{fontWeight: 'bold', padding: '5%'}}>Complain status: </Text>
         <Text
           style={{
-            paddingLeft: 7,
-            padding: 7,
-            backgroundColor: 'red',
-            fontSize: 30,
-          }}>
+            fontWeight: "bold",fontSize: 24, textAlign:"center" ,padding: '5%',color:"white", backgroundColor: "red"}}>
           {status}
         </Text>
       </View>
@@ -70,23 +66,25 @@ class ComplainDetail extends Component {
 const styles = StyleSheet.create({
   header: {
     backgroundColor: '#02584d',
-    height: 95,
+   // height: 95,
     flexDirection: 'row',
+    marginBottom:'3%',
+    paddingBottom:'3%'
   },
   iconWrapper: {
-    marginTop: 26,
-    marginLeft: 7,
+    marginTop: '6%',
+    marginLeft: '1%',
   },
   IconEntStyle: {
     color: '#fff',
   },
   headerTextWrapper: {
-    marginHorizontal: 100,
-    marginTop: 28,
+    marginHorizontal: '18%',
+    marginTop: '4%',
   },
   headerText: {
     color: '#fff',
-    fontSize: 30,
+    fontSize: 28,
   },
   buttonWrapper: {
     marginTop: 10,

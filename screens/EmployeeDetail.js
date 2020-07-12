@@ -72,46 +72,42 @@ class ComplainDetail extends Component {
             <Text style={styles.headerText}>Employee Detail</Text>
           </View>
         </View>
-        <Text style={{fontWeight: 'bold', padding: 7}}>Emoloyee Name: </Text>
-        <Text style={{paddingLeft: 7}}>{Name}</Text>
-        <Text style={{fontWeight: 'bold', padding: 7}}>Employee Email:</Text>
-        <Text style={{paddingLeft: 7}}> {Email}</Text>
-        <Text style={{fontWeight: 'bold', padding: 7}}>Employee Number:</Text>
-        <Text style={{paddingLeft: 7}}> {Number}</Text>
-        <Text style={{fontWeight: 'bold', padding: 7}}>
+        <Text style={{fontWeight: 'bold', padding: '5%'}}>Emoloyee Name: </Text>
+        <Text style={{paddingLeft: '5%'}}>{Name}</Text>
+        <Text style={{fontWeight: 'bold', padding: '5%'}}>Employee Email:</Text>
+        <Text style={{paddingLeft: '5%'}}> {Email}</Text>
+        <Text style={{fontWeight: 'bold', padding: '5%'}}>Employee Number:</Text>
+        <Text style={{paddingLeft: '5%'}}> {Number}</Text>
+        <Text style={{fontWeight: 'bold', padding: '5%'}}>
           Number of Jobs Done:{' '}
         </Text>
-        <Text style={{paddingLeft: 7}}>{JobAssign}</Text>
-        <Text style={{fontWeight: 'bold', padding: 7}}>Rating:</Text>
-        <Text style={{paddingLeft: 7}}>
+        <Text style={{paddingLeft: '6%'}}>{JobAssign}</Text>
+        <Text style={{fontWeight: 'bold', padding: '5%'}}>Rating:</Text>
+        <Text style={{paddingLeft: '5%'}}>
           {' '}
           {Rating} <Text style={{fontSize: 15}}>/5</Text>
         </Text>
 
         {status == 'Free' ? (
           <View>
-            <Text style={{fontWeight: 'bold', padding: 7}}>
+            <Text style={{fontWeight: 'bold',padding: '5%'}}>
               Complain status:{' '}
             </Text>
             <Text
               style={{
-                paddingLeft: 7,
-                padding: 7,
-                backgroundColor: 'red',
-                fontSize: 20,
-              }}>
+                fontWeight: "bold",fontSize: 24, textAlign:"center" ,padding: '5%',color:"white", backgroundColor: "red" }}>
               {status}
             </Text>
           </View>
         ) : (
           <View>
-            <Text style={{fontWeight: 'bold', padding: 7}}>
+            <Text style={{fontWeight: 'bold', padding: '3%'}}>
               Complain status:{' '}
             </Text>
             <Text
               style={{
-                paddingLeft: 7,
-                padding: 7,
+                paddingLeft: '5%',
+                padding: '5%',
                 backgroundColor: 'mediumseagreen',
                 fontSize: 20,
               }}>
@@ -134,23 +130,31 @@ class ComplainDetail extends Component {
 const styles = StyleSheet.create({
   header: {
     backgroundColor: '#02584d',
-    height: 95,
+    height: '8%',
     flexDirection: 'row',
   },
+  headerText:{
+    color: '#fff' , paddingHorizontal: '-5%',
+  
+    //backgroundColor:'blue',
+    marginLeft:'28%',
+    fontSize:15,
+    marginBottom:'-2%'
+  },
   iconWrapper: {
-    marginTop: 26,
-    marginLeft: 7,
+    marginTop: '3%',
+    marginLeft: '3%',
   },
   IconEntStyle: {
     color: '#fff',
   },
   headerTextWrapper: {
-    marginHorizontal: 100,
-    marginTop: 28,
+    marginHorizontal: '18%',
+    marginTop: '4%',
   },
   headerText: {
     color: '#fff',
-    fontSize: 30,
+    fontSize: 20,
   },
   buttonWrapper: {
     marginTop: 10,
@@ -160,8 +164,8 @@ const styles = StyleSheet.create({
     width: 200,
     backgroundColor: '#e74c3c',
     borderRadius: 25,
-    marginVertical: 10,
-    paddingVertical: 13,
+    marginVertical: '20%',
+    paddingVertical: '10%',
   },
   buttonText: {
     fontSize: 16,

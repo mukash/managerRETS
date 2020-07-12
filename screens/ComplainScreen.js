@@ -37,29 +37,28 @@ export default class ListingScreen extends Component {
     <List containerStyle={{borderTopWidth: 0, borderBottomWidth: 0}}>
       <ListItem selected containerStyle={{borderBottomWidth: 0}}>
         <TouchableOpacity onPress={() => this.getComplainDetail(item)}>
-          <Text style={{fontWeight: 'bold', padding: 7}}>Client Name: </Text>
-          <Text style={{paddingLeft: 7}}>{item.name}</Text>
-          <Text style={{fontWeight: 'bold', padding: 7}}>
-            Employee on this complain:
+          <Text style={{fontWeight: 'bold', padding: '5%'}}>Client Name: </Text>
+          <Text style={{paddingLeft: '5%'}}>{item.name}</Text>
+          <Text style={{fontWeight: 'bold', padding: '4%'}}>Employee on this complain:
           </Text>
-          <Text style={{paddingLeft: 7}}> {item.empname}</Text>
+          <Text style={{paddingLeft: '5%'}}> {item.empname}</Text>
 
           {item.status == 'Pending' ? (
             <View>
-              <Text style={{fontWeight: 'bold', padding: 7}}>
+              <Text style={{fontWeight: 'bold', padding: '8%'}}>
                 Complain status:
               </Text>
-              <Text style={{paddingLeft: 7, backgroundColor: 'red'}}>
+              <Text style={{ fontWeight: "bold",fontSize: 24, textAlign:"center" ,padding:'5%',color:"white", backgroundColor: 'red'}}>
                 {' '}
                 {item.status}
               </Text>
             </View>
           ) : (
             <View>
-              <Text style={{fontWeight: 'bold', padding: 7}}>
+              <Text style={{fontWeight: 'bold', padding: '5%'}}>
                 Complain status:
               </Text>
-              <Text style={{paddingLeft: 7, backgroundColor: 'mediumseagreen'}}>
+              <Text style={{ fontWeight: "bold",fontSize: 24, textAlign:"center" ,padding:'5%',color:"white",  backgroundColor: "mediumseagreen"}}>
                 {' '}
                 {item.status}
               </Text>
@@ -96,7 +95,7 @@ export default class ListingScreen extends Component {
             <View style={styles.iconWrapper}>
               <TouchableOpacity
                 onPress={() => this.props.navigation.openDrawer()}>
-                <IconEnt name="menu" style={styles.IconEntStyle} size={35} />
+                <IconEnt name="menu" style={styles.IconEntStyle} size={25} />
               </TouchableOpacity>
             </View>
             <View style={styles.headerTextWrapper}>
@@ -125,7 +124,7 @@ export default class ListingScreen extends Component {
 const styles = StyleSheet.create({
   header: {
     backgroundColor: '#02584d',
-    height: 95,
+    //height: 95,
     flexDirection: 'row',
   },
   message: {
@@ -134,18 +133,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   iconWrapper: {
-    marginTop: 24,
-    marginLeft: 7,
+    marginTop: '4%',
+    marginLeft: '3%',
   },
   IconEntStyle: {
     color: '#fff',
   },
   headerTextWrapper: {
-    marginHorizontal: 100,
-    marginTop: 25,
+    marginHorizontal: '20%',
+    marginTop: '3%',
+    marginBottom: '4%'
   },
   headerText: {
     color: '#fff',
-    fontSize: 30,
+    fontSize: 25,
   },
 });
