@@ -20,13 +20,12 @@ class ComplainDetail extends Component {
   render() {
     const {navigation} = this.props;
     const Name = navigation.getParam('Name');
-    const address = navigation.getParam('Address');
+    const address = navigation.getParam('Number');
     let jobId = navigation.getParam('jobId');
-
     let status = navigation.getParam('Status');
-
     let Description = navigation.getParam('Description');
     let Date = navigation.getParam('Date');
+    let cName = navigation.getParam('cName');
     return (
       <View>
         <View style={styles.header}>
@@ -44,7 +43,7 @@ class ComplainDetail extends Component {
           </View>
         </View>
         <Text style={{fontWeight: 'bold', padding: '5%'}}>Client Name: </Text>
-        <Text style={{paddingLeft: '5%'}}>{Name}</Text>
+        <Text style={{paddingLeft: '5%'}}>{cName}</Text>
         <Text style={{fontWeight: 'bold', padding: '5%'}}>Client Number:</Text>
         <Text style={{paddingLeft: '5%'}}> {address}</Text>
         <Text style={{fontWeight: 'bold', padding: '5%'}}>Description: </Text>
@@ -53,10 +52,22 @@ class ComplainDetail extends Component {
           Complain Registration Date:
         </Text>
         <Text style={{paddingLeft: '5%'}}> {Date}</Text>
-        <Text style={{fontWeight: 'bold', padding: '5%'}}>Complain status: </Text>
+        <Text style={{fontWeight: 'bold', padding: '5%'}}>
+          Employee On Complain
+        </Text>
+        <Text style={{paddingLeft: '5%'}}> {Name}</Text>
+        <Text style={{fontWeight: 'bold', padding: '5%'}}>
+          Complain status:{' '}
+        </Text>
         <Text
           style={{
-            fontWeight: "bold",fontSize: 24, textAlign:"center" ,padding: '5%',color:"white", backgroundColor: "red"}}>
+            fontWeight: 'bold',
+            fontSize: 24,
+            textAlign: 'center',
+            padding: '5%',
+            color: 'white',
+            backgroundColor: 'red',
+          }}>
           {status}
         </Text>
       </View>
@@ -66,20 +77,20 @@ class ComplainDetail extends Component {
 const styles = StyleSheet.create({
   header: {
     backgroundColor: '#02584d',
-   // height: 95,
+    // height: 95,
     flexDirection: 'row',
-    marginBottom:'3%',
-    paddingBottom:'3%'
+    marginBottom: '3%',
+    paddingBottom: '3%',
   },
   iconWrapper: {
-    marginTop: '6%',
+    marginTop: '5%',
     marginLeft: '1%',
   },
   IconEntStyle: {
     color: '#fff',
   },
   headerTextWrapper: {
-    marginHorizontal: '18%',
+    marginHorizontal: '24%',
     marginTop: '4%',
   },
   headerText: {

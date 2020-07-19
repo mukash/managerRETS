@@ -35,7 +35,7 @@ export default class ListingScreen extends Component {
       .then(response => response.json())
       .then(responseJson => {
         this.setState({
-          dataSource: responseJson.list,
+          dataSource: responseJson['working'],
         });
       })
       .finally(() => this.setState({isLoading: false}))
@@ -89,7 +89,7 @@ export default class ListingScreen extends Component {
               />
             </View>
             <View style={styles.headerTextWrapper}>
-              <Text style={styles.headerText}>Employee List</Text>
+              <Text style={styles.headerText}>Working Employee</Text>
             </View>
           </View>
           <View style={{backgroundColor: '#fff'}}>
