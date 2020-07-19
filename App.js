@@ -6,6 +6,7 @@ import LoginScreen from './screens/LoginScreen';
 import LoadingScreen from './screens/LoadingScreen';
 import EmployeeDetail from './screens/EmployeeDetail';
 import ComplainDetail from './screens/ComplainDetail';
+<<<<<<< HEAD
 import Employee from './screens/Employee';
 import FreeEmp from './screens/FreeEmp';
 import WorkingEmp from './screens/WorkingEmp';
@@ -13,6 +14,10 @@ import Jobs from './screens/Jobs';
 import Pending from './screens/Pending';
 import Process from './screens/Process';
 import Completed from './screens/completed';
+=======
+import LogoScreen from './screens/LogoScreen';
+
+>>>>>>> b0a5957119d8ac7b1bde5f0ba31033c9d70c4fbd
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -36,6 +41,8 @@ const AppNavigator = createStackNavigator({
 });
 
 const switchNav = createSwitchNavigator({
+  Logo: {screen: LogoScreen ,  navigationOptions: { headerShown: false, }},
+
   Loading: {screen: LoadingScreen},
   stack: AppNavigator,
   Dashboard: {
