@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
 import MapView, {Marker, AnimatedRegion} from 'react-native-maps';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 // const markerImg = require('../assets/img.jpg');
 class MapScreen extends Component {
   constructor(props) {
@@ -13,20 +14,16 @@ class MapScreen extends Component {
       region: {
         latitude: 33.7463,
         longitude: 72.8397,
-        latitudeDelta: 0.0822,
-        longitudeDelta: 0.0321,
+        latitudeDelta: 1.5,
+        longitudeDelta: 1.5,
       },
     };
   }
-  getInitialState() {
-    return {
-      coordinate: new AnimatedRegion({
-        latitude: LATITUDE,
-        longitude: LONGITUDE,
-      }),
-    };
-  }
+
   componentDidMount = () => {
+    this.getCoords();
+  };
+  getCoords = () => {
     fetch('http://rets.codlers.com/api/manager/trackemp.php', {
       method: 'POST',
       headers: {
@@ -39,6 +36,7 @@ class MapScreen extends Component {
         this.setState({
           markers: responseJson,
         });
+        console.log('object');
       })
       .catch(error => {
         console.error(error);
@@ -61,11 +59,12 @@ class MapScreen extends Component {
             />
           ))}
         </MapView>
-        {/* <TouchableOpacityz
-          onPress={this.getLocation}
-          style={styles.buttonContainer}>
-          <Text>Button</Text>
-        </TouchableOpacity> */}
+
+        <TouchableOpacity
+          style={styles.buttonContainer}
+          onPress={this.getCoords}>
+          <Text style={styles.btnText}>Latest Location</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -93,6 +92,7 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
     marginBottom: 150,
+    height: '100%',
   },
   buttonContainer: {
     marginTop: 10,
@@ -101,9 +101,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 20,
-    width: 250,
+    width: '60%',
     borderRadius: 30,
     backgroundColor: '#439889',
+    alignSelf: 'center',
+  },
+  btnText: {
+    alignSelf: 'center',
+    color: '#fff',
+    marginRight: 38,
   },
 });
 export default MapScreen;

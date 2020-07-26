@@ -197,15 +197,15 @@ export default class Profile extends Component {
                     {this.state.count}
                   </Text>
                   <Text style={{fontSize: 20}}>
-                    Pending: {'\t\t\t\t\t\t\t\t'}
+                    Pending: {'\t'}
                     {this.state.pending}
                   </Text>
                   <Text style={{fontSize: 20}}>
-                    Under Process: {'\t\t'}
+                    Under Process: {'\t'}
                     {this.state.processing}
                   </Text>
                   <Text style={{fontSize: 20}}>
-                    Completed:{'\t\t\t\t\t'}
+                    Completed:{'\t'}
                     {this.state.completed}
                   </Text>
                 </TouchableOpacity>

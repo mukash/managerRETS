@@ -35,7 +35,7 @@ const CustomDrawerComponent = props => (
           marginTop: 30,
           marginBottom: 30,
         }}
-        source={require('../assets/admin.jpg')}
+        source={require('../assets/img.png')}
       />
     </View>
     <View>
