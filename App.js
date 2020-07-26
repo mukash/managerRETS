@@ -13,7 +13,10 @@ import Jobs from './screens/Jobs';
 import Pending from './screens/Pending';
 import Process from './screens/Process';
 import Completed from './screens/completed';
+
 import LogoScreen from './screens/LogoScreen';
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);

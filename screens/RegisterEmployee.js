@@ -209,8 +209,8 @@ const styles = StyleSheet.create({
     marginBottom: '-10%',
     color: '#439889',
     //marginHorizontal: '2%',
-    marginHorizontal: '5%',
-    marginVertical: '2%',
+    marginHorizontal: '4%',
+    marginVertical: '4%',
   },
   IconEntStyle1: {
     marginBottom: '-8%',
