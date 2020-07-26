@@ -14,8 +14,8 @@ class MapScreen extends Component {
       region: {
         latitude: 33.7463,
         longitude: 72.8397,
-        latitudeDelta: 1.5,
-        longitudeDelta: 1.5,
+        latitudeDelta: 0.5,
+        longitudeDelta: 0.5,
       },
     };
   }
