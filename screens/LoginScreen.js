@@ -29,7 +29,7 @@ class LoginScreen extends React.Component {
     headerTitleStyle: {color: '#fff'},
   };
   login = () => {
-    fetch('http://rets.codlers.com/api/manager/loginmng.php', {
+    fetch('https://jhnerd.com/rets/api/manager/loginmng.php', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

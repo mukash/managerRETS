@@ -32,7 +32,7 @@ export default class Profile extends Component {
     }
   }
   jobInfo = () => {
-    fetch('http://rets.codlers.com/api/manager/jobstatusinfo.php', {
+    fetch('https://jhnerd.com/rets/api/manager/jobstatusinfo.php', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -74,7 +74,7 @@ export default class Profile extends Component {
       });
   };
   empInfo = () => {
-    fetch('http://rets.codlers.com/api/manager/listing.php', {
+    fetch('https://jhnerd.com/rets/api/manager/listing.php', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

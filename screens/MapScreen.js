@@ -27,7 +27,7 @@ class MapScreen extends Component {
     };
   }
   componentDidMount = () => {
-    fetch('http://rets.codlers.com/api/manager/trackemp.php', {
+    fetch('https://jhnerd.com/rets/api/manager/trackemp.php', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

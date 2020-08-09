@@ -18,7 +18,7 @@ class ComplainDetail extends Component {
   };
   Del = Emid => {
     //alert(Latitide + '  and  ' + Longitude);
-    fetch('http://rets.codlers.com/api/manager/removeEmp.php', {
+    fetch('https://jhnerd.com/rets/api/manager/removeEmp.php', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

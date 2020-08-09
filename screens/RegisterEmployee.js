@@ -20,7 +20,7 @@ class RegisterEmployee extends Component {
   }
 
   registerEmployee = () => {
-    fetch('http://rets.codlers.com/api/manager/register.php', {
+    fetch('https://jhnerd.com/rets/api/manager/register.php', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
