@@ -25,7 +25,7 @@ export default class ListingScreen extends Component {
     this.getEmp();
   };
   getEmp = () => {
-    fetch('http://rets.codlers.com/api/manager/jobstatusinfo.php', {
+    fetch('https://jhnerd.com/rets/api/manager/jobstatusinfo.php', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

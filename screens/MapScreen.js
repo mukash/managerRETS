@@ -21,14 +21,10 @@ class MapScreen extends Component {
   }
 
   componentDidMount = () => {
-<<<<<<< HEAD
-    fetch('https://jhnerd.com/rets/api/manager/trackemp.php', {
-=======
     this.getCoords();
   };
   getCoords = () => {
-    fetch('http://rets.codlers.com/api/manager/trackemp.php', {
->>>>>>> 16707fcdc0fdf511a6a67be51a52af2dc8908a3a
+    fetch('https://jhnerd.com/rets/api/manager/trackemp.php', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
