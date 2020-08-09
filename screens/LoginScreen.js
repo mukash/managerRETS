@@ -13,7 +13,6 @@ import {
 import AsyncStorage from '@react-native-community/async-storage';
 import IconEnt from 'react-native-vector-icons/Entypo';
 
-
 class LoginScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +20,7 @@ class LoginScreen extends React.Component {
     this.state = {
       name: '',
       email: '',
+      pass: '',
     };
   }
   static navigationOptions = {
@@ -85,14 +85,9 @@ class LoginScreen extends React.Component {
           />
         </View>
         <View>
-        <View style={styles.IconEntStyle1}>
-              < IconEnt
-                name="mail"
-                style={styles.IconEntStyle}
-                size={21}
-                
-              />
-              </View>
+          <View style={styles.IconEntStyle1}>
+            <IconEnt name="mail" style={styles.IconEntStyle} size={21} />
+          </View>
           <TextInput
             style={styles.inputBox}
             underlineColorAndroid="black"
@@ -103,14 +98,9 @@ class LoginScreen extends React.Component {
             onChangeText={email => this.setState({email})}
             onSubmitEditing={() => this.password.focus()}
           />
-           <View style={styles.IconEntStyle1}>
-              < IconEnt
-                name="lock"
-                style={styles.IconEntStyle}
-                size={21}
-                
-              />
-              </View>
+          <View style={styles.IconEntStyle1}>
+            <IconEnt name="lock" style={styles.IconEntStyle} size={21} />
+          </View>
           <TextInput
             style={styles.inputBox}
             underlineColorAndroid="black"
@@ -137,7 +127,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   inputBox: {
-   width: 300,
+    width: 300,
     //backgroundColor: '#fff',
     borderRadius: 0,
     paddingHorizontal: '19%',
@@ -158,17 +148,16 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
   },
- 
-  IconEntStyle:{
+
+  IconEntStyle: {
     marginBottom: '-100%',
     color: '#439889',
     marginHorizontal: '5%',
-    marginVertical: '4%'
+    marginVertical: '4%',
   },
   IconEntStyle1: {
-    marginBottom: '-7%'
+    marginBottom: '-7%',
   },
-  
 });
 
 export default LoginScreen;

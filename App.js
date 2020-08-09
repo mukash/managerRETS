@@ -6,7 +6,6 @@ import LoginScreen from './screens/LoginScreen';
 import LoadingScreen from './screens/LoadingScreen';
 import EmployeeDetail from './screens/EmployeeDetail';
 import ComplainDetail from './screens/ComplainDetail';
-
 import Employee from './screens/Employee';
 import FreeEmp from './screens/FreeEmp';
 import WorkingEmp from './screens/WorkingEmp';
@@ -41,7 +40,7 @@ const AppNavigator = createStackNavigator({
 });
 
 const switchNav = createSwitchNavigator({
-  Logo: {screen: LogoScreen ,  navigationOptions: { headerShown: false, }},
+  Logo: {screen: LogoScreen, navigationOptions: {headerShown: false}},
 
   Loading: {screen: LoadingScreen},
   stack: AppNavigator,

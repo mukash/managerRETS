@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {FlatList, TouchableOpacity, View, Text, StyleSheet} from 'react-native';
 import {List, ListItem} from 'native-base';
 import IconEnt from 'react-native-vector-icons/Entypo';
+console.disableYellowBox = true;
 export default class ListingScreen extends Component {
   constructor(props) {
     super(props);
